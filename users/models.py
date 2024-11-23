@@ -5,8 +5,14 @@ class User(AbstractUser):
     name=models.CharField(max_length=255)
     email=models.CharField(max_length=255,unique=True)
     password=models.CharField(max_length=255)
+    recommendation=models.CharField(max_length=255,null=True, blank=True)
     username=None
     
     
     USERNAME_FIELD='email'
     REQUIRED_FIELDS=[]
+class Plant(models.Model):
+    name=models.CharField(max_length=255,unique=True)
+    description = models.TextField()
+    
+2
