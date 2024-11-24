@@ -118,6 +118,7 @@ class RecommendationDetailView(APIView):
                return Response({
                 'name': plant.name,
                 'description': plant.description,
+                'image':plant.image,
                 
                }, status=status.HTTP_200_OK)
           except User.DoesNotExist:

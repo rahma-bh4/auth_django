@@ -14,5 +14,6 @@ class User(AbstractUser):
 class Plant(models.Model):
     name=models.CharField(max_length=255,unique=True)
     description = models.TextField()
+    image=models.CharField(max_length=255,null=True)
     
 2
